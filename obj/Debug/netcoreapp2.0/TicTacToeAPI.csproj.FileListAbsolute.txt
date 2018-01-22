@@ -1,0 +1,10 @@
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\bin\Debug\netcoreapp2.0\TicTacToeAPI.deps.json
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\bin\Debug\netcoreapp2.0\TicTacToeAPI.runtimeconfig.json
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\bin\Debug\netcoreapp2.0\TicTacToeAPI.runtimeconfig.dev.json
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\bin\Debug\netcoreapp2.0\TicTacToeAPI.dll
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\bin\Debug\netcoreapp2.0\TicTacToeAPI.pdb
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAPI.csproj.CoreCompileInputs.cache
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAPI.AssemblyInfoInputs.cache
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAPI.AssemblyInfo.cs
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAPI.dll
+c:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAPI.pdb
