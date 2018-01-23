@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace TicTacToeAPI.Controllers
 {
-    [Route("api/TicTacToe")]
+    [Route("api/[controller]")]
     public class TicTacToeController : Controller
     {
         private readonly TicTacToeContext _context;
