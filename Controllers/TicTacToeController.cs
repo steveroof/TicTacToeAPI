@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using TicTacToeAPI.Models;
 using System.Linq;
+using System;
+using Newtonsoft.Json;
 
 namespace TicTacToeAPI.Controllers
 {
@@ -13,12 +15,6 @@ namespace TicTacToeAPI.Controllers
         public TicTacToeController(TicTacToeContext context)
         {
             _context = context;
-
-            if (_context.TicTacToeItems.Count() == 0)
-            {
-                _context.TicTacToeItems.Add(new TicTacToeItem { Name = "Item1" });
-                _context.SaveChanges();
-            }
         }
         [HttpGet]
         public IEnumerable<TicTacToeItem> GetAll()
@@ -26,60 +22,31 @@ namespace TicTacToeAPI.Controllers
             return _context.TicTacToeItems.ToList();
         }
 
-        [HttpGet("{id}", Name = "GetTicTacToe")]
-        public IActionResult GetById(long id)
-        {
-            var item = _context.TicTacToeItems.FirstOrDefault(t => t.Id == id);
-            if (item == null)
-            {
-                return NotFound();
-            }
-            return new ObjectResult(item);
-        }
         [HttpPost]
-        public IActionResult Create([FromBody] TicTacToeItem item)
+        public IActionResult Create([FromBody] Object o)
         {
-            if (item == null)
+            if (o == null)
             {
                 return BadRequest();
             }
 
-            _context.TicTacToeItems.Add(item);
+            TicTacToeItem result = new TicTacToeItem();
+            result.gameState = o.ToString();
+
+            _context.TicTacToeItems.Add(result);
             _context.SaveChanges();
 
-            return CreatedAtRoute("GetTicTacToe", new { id = item.Id }, item);
-        }
-        [HttpPut("{id}")]
-        public IActionResult Update(long id, [FromBody] TicTacToeItem item)
-        {
-            if (item == null || item.Id != id)
-            {
-                return BadRequest();
-            }
-
-            var TicTacToe = _context.TicTacToeItems.FirstOrDefault(t => t.Id == id);
-            if (TicTacToe == null)
-            {
-                return NotFound();
-            }
-
-            TicTacToe.IsComplete = item.IsComplete;
-            TicTacToe.Name = item.Name;
-
-            _context.TicTacToeItems.Update(TicTacToe);
-            _context.SaveChanges();
             return new NoContentResult();
         }
-        [HttpDelete("{id}")]
-        public IActionResult Delete(long id)
+        [HttpDelete]
+        public IActionResult Delete()
         {
-            var TicTacToe = _context.TicTacToeItems.FirstOrDefault(t => t.Id == id);
-            if (TicTacToe == null)
-            {
-                return NotFound();
-            }
+            var TicTacToe = _context.TicTacToeItems;
 
-            _context.TicTacToeItems.Remove(TicTacToe);
+            foreach (TicTacToeItem item in _context.TicTacToeItems)
+            {
+                _context.Remove(item);
+            }
             _context.SaveChanges();
             return new NoContentResult();
         }
