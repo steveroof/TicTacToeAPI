@@ -11,21 +11,14 @@ namespace TicTacToeAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TicTacToeContext>(opt => opt.UseInMemoryDatabase("TicTacToeList"));
+            services.AddCors();
             services.AddMvc();
-            services.AddCors(options => //https://docs.microsoft.com/en-us/aspnet/core/security/cors
-            {
-                options.AddPolicy("AllowAllOrigins",
-                    builder =>
-                    {
-                        builder.AllowAnyOrigin();
-                    });
-            });
         }
 
         public void Configure(IApplicationBuilder app)
         {
-            // Shows UseCors with named policy.
-            app.UseCors("AllowAllOrigins");
+            app.UseCors(builder =>
+               builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod());
             app.UseMvc();
         }
     }
