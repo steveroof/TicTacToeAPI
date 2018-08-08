@@ -12535,28 +12535,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\steve\\.nuget\\packages\\": {},
+    "C:\\Users\\stephen.roof\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\steve\\Documents\\GitHub\\TicTacToeAPI\\TicTacToeAPI.csproj",
+      "projectUniqueName": "c:\\Users\\stephen.roof\\Documents\\GitHub\\TicTacToeAPI\\TicTacToeAPI.csproj",
       "projectName": "TicTacToeAPI",
-      "projectPath": "C:\\Users\\steve\\Documents\\GitHub\\TicTacToeAPI\\TicTacToeAPI.csproj",
-      "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\steve\\Documents\\GitHub\\TicTacToeAPI\\obj\\",
+      "projectPath": "c:\\Users\\stephen.roof\\Documents\\GitHub\\TicTacToeAPI\\TicTacToeAPI.csproj",
+      "packagesPath": "C:\\Users\\stephen.roof\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\stephen.roof\\Documents\\GitHub\\TicTacToeAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\stephen.roof\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "\\\\denver\\Technology Services\\Gary\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
