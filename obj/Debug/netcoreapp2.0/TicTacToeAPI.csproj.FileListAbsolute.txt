@@ -18,3 +18,4 @@ C:\Users\steve\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAP
 C:\Users\steve\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAPI.AssemblyInfo.cs
 C:\Users\steve\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAPI.dll
 C:\Users\steve\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAPI.pdb
+C:\Users\stephen.roof\Documents\GitHub\TicTacToeAPI\obj\Debug\netcoreapp2.0\TicTacToeAPI.csprojAssemblyReference.cache
